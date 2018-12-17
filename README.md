@@ -1,16 +1,19 @@
-BTS PenTesting Lab is an open source vulnerable web application, created by Cyber Security & Privacy Foundation (www.cysecurity.org). It can be used to learn about many different types of web application vulnerabilities.
+ > 本项目是基于  [BTS PenTesting Lab 的开源代码](https://github.com/CSPF-Founder/btslab "BTS PenTesting Lab 的开源代码") 做的部分汉化、修改和新增,感谢原作者。
 
-Currently, the app contains the following types of vulnerabilities:
-* SQL Injection
-* XSS(includes Flash Based xss)
-* CSRF
-* Clickjacking
-* SSRF
-* File Inclusion
-* Code Execution
-* Insecure Direct Object Reference
-* Unrestricted File Upload vulnerability
-* Open URL Redirection
-* Server Side Includes(SSI) Injection
-and more...
+## 初始化方法
 
+ 1. 修改config.php中的数据库信息
+ 2. 执行setup.php
+
+
+## 部分文件说明
+- \evil\  (csrf入侵示例)
+
+- \vulnerability\csrf\changeinfo_fixed.php         (csrf防御示例)
+- \vulnerability\csrf\changeinfo_fixed_token.php   (csrf防御示例) 
+
+- \vulnerability\xss\xss1_fixed.php  (xss1防御示例)
+- \vulnerability\xss\xss2_fixed.php  (xss2防御示例)
+- \vulnerability\xss\xss3_fixed.php  (xss3防御示例)
+- \vulnerability\xss\xss4_fixed.php  (xss4防御示例)
+- \vulnerability\xss\xss5_fixed.php  (xss5防御示例)
