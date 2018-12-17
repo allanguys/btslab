@@ -9,7 +9,7 @@ $name=$_REQUEST['name'];
 $email=$_REQUEST['email'];
 $msg=$_REQUEST['msg'];
 		
-mysql_query("insert into Messages (name,email,msg) values ('".$name."','".$email."','".$msg."')") or die(mysql_error());
+mysqli_query($con,"insert into Messages (name,email,msg) values ('".$name."','".$email."','".$msg."')") or die(mysql_error());
 	 
 	 
 	

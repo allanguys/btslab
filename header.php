@@ -66,6 +66,7 @@ $s1=serialize($a1);
 							<li> <a href="/btslab/vulnerability/xss/xss2.php">Challenge 2</a></li>
 							<li> <a href="/btslab/vulnerability/xss/xss3.php">Challenge 3</a></li>
 							<li> <a href="/btslab/vulnerability/xss/xss4.php">Challenge 4</a></li>
+							<li> <a href="/btslab/vulnerability/xss/xss5.php">Challenge 5</a></li>
 					       	 </ul>
 					       </li>
 						<li><a href="/btslab/vulnerability/xss/postxss.php">POST Based</a></li>

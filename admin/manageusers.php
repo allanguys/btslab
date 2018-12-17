@@ -5,7 +5,7 @@ include($_SERVER['DOCUMENT_ROOT'].'/btslab/mysqlconnection.php');
 
 if(isset($_POST['delete']))
 {
-mysql_query("Delete from users where username='".$_POST['user']."'");
+mysqli_query($con,"Delete from users where username='".$_POST['user']."'");
 }
 
 ?>
@@ -13,12 +13,12 @@ mysql_query("Delete from users where username='".$_POST['user']."'");
 <form action="manageusers.php" method="POST">		
 
 <?php		
-$result=mysql_query("select * from users where privilege='user'") or die(mysql_error());
-$row=mysql_num_rows($result);
+$result=mysqli_query($con,"select * from users where privilege='user'") or die(mysql_error());
+$row=mysqli_num_rows($result);
 if($row>=1)
 {
 echo "</br></br>List of Registered users: </br>";
-while($row=mysql_fetch_array($result))
+while($row=mysqli_fetch_array($result))
 {
 
 echo "<input type='radio' name='user' value='{$row['username']}'/> ".$row['username']."<br/>";

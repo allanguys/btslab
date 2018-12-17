@@ -8,16 +8,16 @@ include($_SERVER['DOCUMENT_ROOT'].'/btslab/header.php');
 include($_SERVER['DOCUMENT_ROOT'].'/btslab/mysqlconnection.php');
 if(isset($_REQUEST['action']) && $_REQUEST['action']='delete')
 {
-mysql_query("Delete from Messages;");
+mysqli_query($con,"Delete from Messages;");
 }
-$result=mysql_query("select * from Messages;") or die(mysql_error());
-$row=mysql_num_rows($result);
+$result=mysqli_query($con,"select * from Messages;") or die(mysql_error());
+$row=mysqli_num_rows($result);
 if($row>=1)
 {
 echo "<div style='text-align: right; '> <a href='?action=delete' >Delete All Messages</a></div> ";
 echo "</br></br>Messages: </br>";
 echo "<ol>";
-	while($row=mysql_fetch_array($result))
+	while($row=mysqli_fetch_array($result))
 	{
 		$title=substr($row['msg'],0,14);
 		$msgid=$row['msgid'];

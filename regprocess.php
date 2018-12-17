@@ -17,8 +17,8 @@ $em=$em."<br/>"."Your Name must be more than 4 characters";
 $e=1;
 header('Location: register.php?em='.$em);
 }
-$result=mysql_query("select * from users where username='$username'") or die(mysql_error());
-if(mysql_num_rows($result)>0)
+$result=mysqli_query($con,"select * from users where username='$username'") or die(mysqli_error());
+if(mysqli_num_rows($result)>0)
 {
 $e=1;
 $em=$em."<br/>"."Username is already taken";
@@ -30,8 +30,8 @@ header('Location: register.php?em='.$em);
 else
 {
 $query="INSERT into users(username, password, email, About,avatar,privilege) values ('$username','$password','$email','$About','default.jpg','user')";
-mysql_query($query) or die(mysql_error());
-mysql_close();
+mysqli_query($con,$query) or die(mysql_error());
+mysqli_close($con);
 header('Location: login.php');
 }
 

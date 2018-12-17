@@ -1,6 +1,6 @@
 <?php
 
-$db_name="bts";
+$db_name="security";
 $db_user="root";
 $db_password="";
 $db_server="localhost";

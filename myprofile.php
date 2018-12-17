@@ -25,10 +25,10 @@ if(isset($_GET['id']))
 	{
 		$id=$_GET['id'];
 		include('mysqlconnection.php');
-		$result=mysql_query("select * from users where id='$id'");
+		$result=mysqli_query($con,"select * from users where id='$id'");
 		if(mysql_num_rows($result)>0)
 		{
-		$row=mysql_fetch_array($result);
+		$row=mysqli_fetch_array($result);
 		echo "UserName : ".$row['username']."<br>";
 		echo "Email : ".$row['email']."<br>";
 		echo "About : ".$row['about']."<br>";

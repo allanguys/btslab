@@ -11,13 +11,13 @@ if(isset($_REQUEST['msgid']))
 {
 	$msgid=$_REQUEST['msgid'];
 
-	$result=mysql_query("select * from Messages where msgid=".$msgid) or die(mysql_error());
-	$row=mysql_num_rows($result);
+	$result=mysqli_query($con,"select * from Messages where msgid=".$msgid) or die(mysql_error());
+	$row=mysqli_num_rows($result);
 	if($row>=1)
 	{
 	echo "</br></br>Message: </br>";
 	 
-		while($row=mysql_fetch_array($result))
+		while($row=mysqli_fetch_array($result))
 		{
 			echo "Sender: ".$row['name']."<br/>";
 			echo "Email: ".$row['email']."<br/>";

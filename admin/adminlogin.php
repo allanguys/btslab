@@ -13,10 +13,10 @@ if(isset($_POST['Login']))
  else
  {
 	$password=sha1($password);
-	$result=mysql_query("select * from users where username='$username' and password='$password' and privilege='admin' ") or die(mysql_error());;
-	if(mysql_num_rows($result)==1)
+	$result=mysqli_query($con,"select * from users where username='$username' and password='$password' and privilege='admin' ") or die(mysql_error());;
+	if(mysqli_num_rows($result)==1)
 	{
-	$data=mysql_fetch_array($result);
+	$data=mysqli_fetch_array($result);
 	session_start();
 	$_SESSION['isAdminLoggedIn']=1;
 	$_SESSION['userid']=$data["ID"];
